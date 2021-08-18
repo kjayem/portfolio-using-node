@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
     <section>
         <div>
             <div>
-                <h3>Current Projects</h3>
+                <h3 class="page-title">Current Projects</h3>
             </div>
             <div id="current-projects">
                 <ul>
@@ -36,11 +36,29 @@ app.get('/', function(req, res) {
         </div>
     </section>
     `;
+    var photos = `
+    <section>
+        <div>
+          <div>
+            <h3 class="page-title">Memories</h3>
+          </div>
+          <div class="gallery-container">
+            <ul>
+                <li><img src="/img/chicago-crown-fountain.jpg"></li>
+                <li><img src="/img/chicago-crossing.jpg"></li>
+                <li><img src="/img/chicago-taxi.jpg"></li>
+                <li><img src="/img/chicago-caution.jpg"></li>
+                <li><img src="/img/chicago-bean.jpg"></li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    `;
     var contact = 
     `
     <section>
         <div id="contact-info">
-            <h3>Contact</h3>
+            <h3 class="page-title">Contact</h3>
             <ul>
                 <li>email: flwfeeld@gmail.com  </li>
                 <li>phone: +82 01029347310</li>
@@ -50,7 +68,7 @@ app.get('/', function(req, res) {
         </div>
     </section>
     `;
-    var html = template.htmlHome(currentTitle, about, projects, contact);
+    var html = template.htmlHome(currentTitle, about, projects, photos, contact);
     res.send(html);
 });
 
@@ -67,15 +85,16 @@ app.get('/album-work', (req, res) => {
   `
   <section>
     <div>
-        <h3>Album Work</h3>
+        <h3 class="page-title">Album Work</h3>
     </div>
   </section>
   `;
+  var photos = '';
   var contact = 
   `
   <section>
       <div id="contact-info">
-          <h3>Contact</h3>
+          <h3 class="page-title">Contact</h3>
           <ul>
               <li>email: flwfeeld@gmail.com  </li>
               <li>phone: +82 01029347310</li>
@@ -85,7 +104,7 @@ app.get('/album-work', (req, res) => {
       </div>
   </section>
   `;
-  var html = template.htmlHome(currentTitle, about, albumWork, contact);
+  var html = template.htmlHome(currentTitle, about, albumWork, photos, contact);
   res.send(html);
 });
 
@@ -102,15 +121,16 @@ app.get('/merch', (req, res) => {
   `
   <section>
     <div>
-        <h3>Merchandise</h3>
+        <h3 class="page-title">Merchandise</h3>
     </div>
   </section>
   `;
+  var photos = '';
   var contact = 
   `
   <section>
       <div id="contact-info">
-          <h3>Contact</h3>
+          <h3 class="page-title">Contact</h3>
           <ul>
               <li>email: flwfeeld@gmail.com  </li>
               <li>phone: +82 01029347310</li>
@@ -123,7 +143,7 @@ app.get('/merch', (req, res) => {
   // var list = template.showProjects(req.projects);
   console.log(req.projects);
   //req.projects 안에 우리의 현재 project들이 배열되어있다. 
-  var html = template.htmlHome(currentTitle, about, merch, contact);
+  var html = template.htmlHome(currentTitle, about, merch, photos, contact);
   res.send(html);
 });
 
@@ -141,15 +161,16 @@ app.get('/webdev-and-design', (req, res) => {
   `
   <section>
     <div>
-        <h3>Web Design & Development</h3>
+        <h3 class="page-title"Web Design & Development</h3>
     </div>
   </section>
   `;
+  var photos = '';
   var contact = 
   `
   <section>
       <div id="contact-info">
-          <h3>Contact</h3>
+          <h3 class="page-title">Contact</h3>
           <ul>
               <li>email: flwfeeld@gmail.com  </li>
               <li>phone: +82 01029347310</li>
@@ -162,7 +183,7 @@ app.get('/webdev-and-design', (req, res) => {
   // var list = template.showProjects(req.projects);
   console.log(req.projects);
   //req.projects 안에 우리의 현재 project들이 배열되어있다. 
-  var html = template.htmlHome(currentTitle, about, webdev, contact);
+  var html = template.htmlHome(currentTitle, about, webdev, photos, contact);
   res.send(html);
 });
 

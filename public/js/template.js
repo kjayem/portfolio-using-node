@@ -2,7 +2,7 @@
 //showProjects() 함수는 data/projects를 보고 우리의 current projects를 뱉어냄.
 
 module.exports = {
-  htmlHome:function(currentTitle, about, projects, contact){
+  htmlHome:function(currentTitle, about, projects, photos, contact){
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -18,6 +18,7 @@ module.exports = {
       ${currentTitle}
       ${about}
       ${projects}
+      ${photos}
       ${contact}
     </body>
     </html>
