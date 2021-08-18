@@ -8,7 +8,7 @@ module.exports = {
               </div>
               <ul>
                 <li><a href="/photos/chicago">Chicago</a></li>
-                <li><a href="/photos/uiuc">UIUC</a></li>
+                <li><a href="/photos/UIUC">UIUC</a></li>
                 <li><a href="/photos/seattle">Seattle</a></li>
               </ul>
             </div>
