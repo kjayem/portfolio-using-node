@@ -1,40 +1,170 @@
 const express = require('express');
 const app = express();
-var fs = require('fs');
-var qs = require('querystring');
-var bodyParser = require('body-parser');
-var compression = require('compression');
 var template = require('./public/js/template.js');
-var topicRouter = require('./routes/topic');
+// var projectRouter = require('./routes/projects');
 
 //public 안에있는 정적인 파일들을 사용하기 위함
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(compression());
-app.get('*', function(req, res, next) {
-  fs.readdir('./data', function(error, filelist){
-    req.list = filelist;
-    next();
-  });
-});
-
-app.use('/topic', topicRouter);
 
 //홈페이지
-// app.get('/', (req, res) => res.send('Hello World!'))
 app.get('/', function(req, res) {
-    var title = 'jayemk';
-    var description = 'Hello, Node.js';
-    var list = template.list(req.list);
-    var html = template.HTML(title, list,
-      `<h2>${title}</h2>${description}
-      <img src="/img/hello.jpg" style="width: 300px; display: block; margin-top: 10px;">`,
-      `<a href="/topic/create">create</a>`
-    );
+    var currentTitle = 'NAMEHERE';
+    var about = 
+    `
+    <section>
+    <div id="about">
+      <ul>
+          <li>Joonmin Kweon</li>
+          <li>Music Producer</li>
+      </ul>   
+    </div>
+    </section>`;
+    var projects = 
+    `
+    <section>
+        <div>
+            <div>
+                <h3>Current Projects</h3>
+            </div>
+            <div id="current-projects">
+                <ul>
+                    <li><a href="/album-work">Album work</a></li>
+                    <li><a href="/merch">Merch</a></li>
+                    <li><a href="/webdev-and-design">Web Design & Development</a></li>
+                </ul>
+            </div>     
+        </div>
+    </section>
+    `;
+    var contact = 
+    `
+    <section>
+        <div id="contact-info">
+            <h3>Contact</h3>
+            <ul>
+                <li>email: flwfeeld@gmail.com  </li>
+                <li>phone: +82 01029347310</li>
+                <li>instagram: j00my</li>
+                <li>Mullae-dong, Yeongdeungpo-gu, Seoul, S. Korea</li>
+            </ul>
+        </div>
+    </section>
+    `;
+    var html = template.htmlHome(currentTitle, about, projects, contact);
     res.send(html);
 });
 
+// album work page
+app.get('/album-work', (req, res) => {
+  var currentTitle = `
+  <section>
+    <a href="/">Home</a>
+  </section>
+  `;
+  var about = 
+  '';
+  var albumWork = 
+  `
+  <section>
+    <div>
+        <h3>Album Work</h3>
+    </div>
+  </section>
+  `;
+  var contact = 
+  `
+  <section>
+      <div id="contact-info">
+          <h3>Contact</h3>
+          <ul>
+              <li>email: flwfeeld@gmail.com  </li>
+              <li>phone: +82 01029347310</li>
+              <li>instagram: j00my</li>
+              <li>Mullae-dong, Yeongdeungpo-gu, Seoul, S. Korea</li>
+          </ul>
+      </div>
+  </section>
+  `;
+  var html = template.htmlHome(currentTitle, about, albumWork, contact);
+  res.send(html);
+});
 
+// merch page
+app.get('/merch', (req, res) => {
+  var currentTitle = `
+  <section>
+    <a href="/">Home</a>
+  </section>
+  `;
+  var about = 
+  '';
+  var merch = 
+  `
+  <section>
+    <div>
+        <h3>Merchandise</h3>
+    </div>
+  </section>
+  `;
+  var contact = 
+  `
+  <section>
+      <div id="contact-info">
+          <h3>Contact</h3>
+          <ul>
+              <li>email: flwfeeld@gmail.com  </li>
+              <li>phone: +82 01029347310</li>
+              <li>instagram: j00my</li>
+              <li>Mullae-dong, Yeongdeungpo-gu, Seoul, S. Korea</li>
+          </ul>
+      </div>
+  </section>
+  `;
+  // var list = template.showProjects(req.projects);
+  console.log(req.projects);
+  //req.projects 안에 우리의 현재 project들이 배열되어있다. 
+  var html = template.htmlHome(currentTitle, about, merch, contact);
+  res.send(html);
+});
+
+
+// webdev page
+app.get('/webdev-and-design', (req, res) => {
+  var currentTitle = `
+  <section>
+    <a href="/">Home</a>
+  </section>
+  `;
+  var about = 
+  '';
+  var webdev = 
+  `
+  <section>
+    <div>
+        <h3>Web Design & Development</h3>
+    </div>
+  </section>
+  `;
+  var contact = 
+  `
+  <section>
+      <div id="contact-info">
+          <h3>Contact</h3>
+          <ul>
+              <li>email: flwfeeld@gmail.com  </li>
+              <li>phone: +82 01029347310</li>
+              <li>instagram: j00my</li>
+              <li>Mullae-dong, Yeongdeungpo-gu, Seoul, S. Korea</li>
+          </ul>
+      </div>
+  </section>
+  `;
+  // var list = template.showProjects(req.projects);
+  console.log(req.projects);
+  //req.projects 안에 우리의 현재 project들이 배열되어있다. 
+  var html = template.htmlHome(currentTitle, about, webdev, contact);
+  res.send(html);
+});
 
 app.use(function(req, res, next) {
   res.status(404).send('Sorry cant find that!')
