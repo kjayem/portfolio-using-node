@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const template = require('./public/js/template.js');
+const navbarTemplate = require('./public/js/navbar-template')
 const aboutTemplate = require('./public/js/about-template');
 const projectTemplate = require('./public/js/projects-template');
 const photosTemplate = require('./public/js/photos-template');
@@ -19,11 +20,12 @@ app.use("/photos", photos);
 //homepage
 app.get('/', (req, res) => {
     var currentTitle = 'NAMEHERE';
-    var about = aboutTemplate.aboutTemplate('Joonmin Kweon', 'Music Producer');
+    var navbar = navbarTemplate.navbarTemplate();
+    var about = aboutTemplate.aboutTemplate('Joonmin Kweon', 'Music Producer / Creative Artist');
     var projects = projectTemplate.projectTemplate();
     var photos = photosTemplate.photosTemplate();
     var contact = contactTemplate.contactTemplate('flwfeeld@gmail.com', '+82 01029347310', 'instagram: j00my', 'Mullae-dong, Yeongdeungpo-gu, Seoul, S. Korea');
-    var html = template.htmlHome(currentTitle, about, projects, photos, contact);
+    var html = template.htmlHome(currentTitle, navbar, about, projects, photos, contact);
     res.send(html);
 });
 

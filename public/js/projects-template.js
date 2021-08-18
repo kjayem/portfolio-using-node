@@ -4,7 +4,7 @@ module.exports = {
         <section>
         <div>
             <div>
-                <h3 class="page-title">Current Projects</h3>
+                <h3 class="page-title">CURRENT PROJECTS</h3>
             </div>
             <div id="current-projects">
                 <ul>

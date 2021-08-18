@@ -2,7 +2,7 @@
 //showProjects() 함수는 data/projects를 보고 우리의 current projects를 뱉어냄.
 
 module.exports = {
-  htmlHome:function(currentTitle, about, projects, photos, contact){
+  htmlHome:function(currentTitle, navbar, about, projects, photos, contact){
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -11,11 +11,14 @@ module.exports = {
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="../css/main.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <title>${currentTitle}</title>
     </head>
     
     <body>
-      ${currentTitle}
+      ${navbar}
+      <div>${currentTitle}</div>
       ${about}
       ${projects}
       ${photos}

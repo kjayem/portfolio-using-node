@@ -5,17 +5,18 @@ const contactTemplate = require('../public/js/contact-template');
 router.route("/:id").get((req, res) => {
     ///photos/:id
     var photoLocation = req.params.id;
-    console.log(photoLocation);
     //photoLocation = :id
     var htmlHead = `
         <!DOCTYPE html>
         <html lang="en">
         <head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="stylesheet" href="../css/main.css">
-          <title>${photoLocation}</title>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="../css/main.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <title>${photoLocation}</title>
         </head>
         `;
     var contact = contactTemplate.contactTemplate('flwfeeld@gmail.com', '+82 01029347310', 'instagram: j00my', 'Mullae-dong, Yeongdeungpo-gu, Seoul, S. Korea');
@@ -53,9 +54,9 @@ router.route("/:id").get((req, res) => {
                 <li><img src="/img/uiuc-art.jpg"></li>
                 <li><img src="/img/uiuc-urbanite.jpg"></li>
                 <li><img src="/img/uiuc-dough.jpg"></li>
-                <li><img src="/img/uiuc-campus.jpg"></li>
                 <li><img src="/img/uiuc-grainger.jpg"></li>
                 <li><img src="/img/uiuc-study.jpg"></li>
+                <li><img src="/img/uiuc-campus.jpg"></li>
             </ul>
         </div>
         </body>

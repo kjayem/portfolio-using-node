@@ -4,7 +4,7 @@ module.exports = {
         <section>
             <div>
               <div>
-                <h3 class="page-title">Memories</h3>
+                <h3 class="page-title">MEMORIES</h3>
               </div>
               <ul>
                 <li><a href="/photos/chicago">Chicago</a></li>

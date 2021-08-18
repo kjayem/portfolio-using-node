@@ -1,7 +1,7 @@
 module.exports = {
     aboutTemplate:function(name, title) {
         return `
-        <section>
+        <section id="section-about">
             <div id="about">
                 <ul>
                     <li>${name}</li>

@@ -3,7 +3,7 @@ module.exports = {
         return `
         <section>
         <div id="contact-info">
-            <h3 class="page-title">Contact</h3>
+            <h3 class="page-title">CONTACT</h3>
             <ul>
                 <li>${email}</li>
                 <li>${phone}</li>
