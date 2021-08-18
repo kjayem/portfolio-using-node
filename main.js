@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
-var template = require('./public/js/template.js');
-var aboutTemplate = require('./public/js/about-template');
-var projectTemplate = require('./public/js/projects-template');
-var photosTemplate = require('./public/js/photos-template');
-var contactTemplate = require('./public/js/contact-template');
+const template = require('./public/js/template.js');
+const aboutTemplate = require('./public/js/about-template');
+const projectTemplate = require('./public/js/projects-template');
+const photosTemplate = require('./public/js/photos-template');
+const contactTemplate = require('./public/js/contact-template');
 const projects = require("./routes/projects");
+const photos = require("./routes/photos");
 
 
 //public 안에있는 정적인 파일들을 사용하기 위함
@@ -13,6 +14,7 @@ app.use(express.static('public'));
 
 //use the projects.js file to handle endpoints that start with /projects
 app.use("/projects", projects);
+app.use("/photos", photos);
 
 //homepage
 app.get('/', (req, res) => {

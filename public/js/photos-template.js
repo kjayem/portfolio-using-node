@@ -6,14 +6,11 @@ module.exports = {
               <div>
                 <h3 class="page-title">Memories</h3>
               </div>
-              <div class="gallery-container">
-                <ul>
-                    <li><img src="/img/chicago-crown-fountain.jpg"></li>
-                    <li><img src="/img/chicago-crossing.jpg"></li>
-                    <li><img src="/img/chicago-caution.jpg"></li>
-                    <li><img src="/img/chicago-bean.jpg"></li>
-                </ul>
-              </div>
+              <ul>
+                <li><a href="/photos/chicago">Chicago</a></li>
+                <li><a href="/photos/uiuc">UIUC</a></li>
+                <li><a href="/photos/seattle">Seattle</a></li>
+              </ul>
             </div>
         </section>
         `;

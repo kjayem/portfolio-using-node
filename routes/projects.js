@@ -1,4 +1,3 @@
-"use strict";
 const express = require('express');
 let router = express.Router();
 
@@ -8,12 +7,12 @@ router.route("/album").get((req, res) => {
 });
 
 router.route("/merch").get((req, res) => {
-    ///projects/album
+    ///projects/merch
     res.send('hi get /projects/merch');
 });
 
 router.route("/webdev").get((req, res) => {
-    ///projects/album
+    ///projects/webdev
     res.send('hi get /projects/webdev-and-design');
 });
 
