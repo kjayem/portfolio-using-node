@@ -1,31 +1,26 @@
 const express = require('express');
 const app = express();
-const template = require('./public/js/template.js');
-const navbarTemplate = require('./public/js/navbar-template')
-const aboutTemplate = require('./public/js/about-template');
-const projectTemplate = require('./public/js/projects-template');
-const photosTemplate = require('./public/js/photos-template');
+const homeTemplate = require('./public/js/home-template.js');
 const contactTemplate = require('./public/js/contact-template');
-const projects = require("./routes/projects");
-const photos = require("./routes/photos");
+const memories = require("./routes/memories");
+
 
 
 //public 안에있는 정적인 파일들을 사용하기 위함
 app.use(express.static('public'));
 
 //use the projects.js file to handle endpoints that start with /projects
-app.use("/projects", projects);
-app.use("/photos", photos);
+app.use("/memories", memories);
+
 
 //homepage
 app.get('/', (req, res) => {
     var currentTitle = 'NAMEHERE';
-    var navbar = navbarTemplate.navbarTemplate();
-    var about = aboutTemplate.aboutTemplate('Joonmin Kweon', 'Music Producer / Creative Artist');
-    var projects = projectTemplate.projectTemplate();
-    var photos = photosTemplate.photosTemplate();
-    var contact = contactTemplate.contactTemplate('flwfeeld@gmail.com', '+82 01029347310', 'instagram: j00my', 'Mullae-dong, Yeongdeungpo-gu, Seoul, S. Korea');
-    var html = template.htmlHome(currentTitle, navbar, about, projects, photos, contact);
+    // var about = aboutTemplate.aboutTemplate('Joonmin Kweon', 'Music Producer / Creative Artist');
+    // var projects = projectTemplate.projectTemplate();
+    // var memories = memoriesTemplate.memoriesTemplate();
+    var contact = contactTemplate.contactTemplate('flwfeeld@gmail.com', '+82 01029347310', '@j00my', 'Mullae-dong, Yeongdeungpo-gu, Seoul, S. Korea');
+    var html = homeTemplate.htmlHome(currentTitle, contact);
     res.send(html);
 });
 

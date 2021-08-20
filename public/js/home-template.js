@@ -1,8 +1,5 @@
-//HTML() 함수는 우리의 HTML template일 뱉어냄.
-//showProjects() 함수는 data/projects를 보고 우리의 current projects를 뱉어냄.
-
 module.exports = {
-  htmlHome:function(currentTitle, navbar, about, projects, photos, contact){
+  htmlHome:function(currentTitle, contact){
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -17,13 +14,36 @@ module.exports = {
     </head>
     
     <body>
-      ${navbar}
-      <div>${currentTitle}</div>
-      ${about}
-      ${projects}
-      ${photos}
+      <header>
+        <nav id="nav-container">
+          <div id="nav-left">
+              <div>
+                  <h1><a href="#" class="translatable">About</a></h1>
+                  <h1><a href="#" class="translatable">Projects</a></h1>
+                  <h1><a href="/memories/choose-country" class="translatable" id="memories">Memories</a></h1>
+                  <h1><a href="#" class="translatable">Shop</a></h1>
+              </div>
+          </div>
+          
+          <div id="nav-right">
+              <div>
+                  <h1>
+                      <a href="#" id="change-language" class="current-lang-english">EN &nbsp;<span class="flag-icon flag-icon-us"></span></a>
+                  </h1>
+                  <h1><a href="#" class="translatable">Login</a></h1>
+                  <h1><a href="#" class="translatable">Notice</a></h1>
+              </div>
+          </div>
+        </nav>
+      </header>
+      <section>
+      
+      </section>
+      <footer>
       ${contact}
+      </footer>
     </body>
+    
     </html>
     `;
   }
