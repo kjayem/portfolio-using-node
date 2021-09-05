@@ -1,10 +1,10 @@
 var express = require('express');
-var path = require('path');
 var expressHbs = require('express-handlebars');
 
 
 var indexRouter = require("./routes/index");
-var memoriesRouter = require("./routes/memories");
+var aboutRouter = require("./routes/about");
+var scrapbookRouter = require("./routes/scrapbook");
 
 var app = express();
 
@@ -19,7 +19,8 @@ app.set('view engine', 'hbs');
 app.use(express.static('public'));
 
 //routes
-app.use("/memories", memoriesRouter);
+app.use("/scrapbook", scrapbookRouter);
+app.use("/about", aboutRouter);
 app.use("/", indexRouter);
 
 //error handlers
