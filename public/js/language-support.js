@@ -20,7 +20,6 @@ var language = {
 
 var langButton = document.getElementById('change-language');
 langButton.addEventListener('click', changeLang);
-console.log('hi');
 
 function changeLang() {
     var textToTranslate = document.querySelectorAll(".translatable")
