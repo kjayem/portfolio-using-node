@@ -7,7 +7,7 @@ const contactTemplate = require('../public/js/contact-template');
 router.route("/:id").get((req, res) => {
     ///memories/:id
     var photoLocation = req.params.id;
-    console.log(photoLocation);
+    // console.log(photoLocation);
     //photoLocation = :id
     var htmlHead = htmlHeadTemplate.htmlHeadTemplate(photoLocation);
     var memories = memoriesTemplate.memoriesTemplate();

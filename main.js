@@ -1,16 +1,26 @@
-const express = require('express');
-const app = express();
-const index = require("./routes/index");
-const memories = require("./routes/memories");
+var express = require('express');
+var path = require('path');
+var expressHbs = require('express-handlebars');
+
+
+var indexRouter = require("./routes/index");
+var memoriesRouter = require("./routes/memories");
+
+var app = express();
+
+// view engine setup
+app.engine('.hbs', expressHbs({
+  defaultLayout: 'layout',  
+  extname: '.hbs'
+}));
+app.set('view engine', 'hbs');
 
 //public 안에있는 정적인 파일들을 사용하기 위함
 app.use(express.static('public'));
 
-//homepage
-app.use("/", index);
-
-//memories page
-app.use("/memories", memories);
+//routes
+app.use("/memories", memoriesRouter);
+app.use("/", indexRouter);
 
 //error handlers
 app.use(function(req, res, next) {
