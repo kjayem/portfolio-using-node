@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background: whitesmoke; */
 }
 
 ul {
@@ -13,8 +12,9 @@ ul {
 
 #nav-container {
     width: 100vw;
-    border-bottom: 2px solid black;
-    height: 50px;
+    height: 5vh;
+    background-color: white;
+    position: sticky;
     display: flex;
     flex-direction: row;
     /* position: sticky;  */
@@ -25,13 +25,16 @@ ul {
     color: black;
 }
 
+#nav-container a:hover {
+    border-bottom: 3px solid black;
+}
+
 #nav-left, #nav-right {
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 1px solid red;
 }
 
 #nav-left div {
@@ -66,83 +69,120 @@ ul {
 #nav-right div {
     display: flex;
     align-self: flex-end;
-    border: 1px solid red;
     margin-right: 10%;
 }
 
 #nav-right div h1 {
-    border: 1px solid red;
     width: 8vw;
     text-align: center;
 }
 
-#section-home {
-    border: 1px solid green;
+#index-container {
+    /* background-image: url("../img/seattle-park.png");
+    background-size: cover;
+    background-position-y: center;
+    background-repeat: no-repeat; */
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+.undefined-studio {
+    line-height: 70px;
+    letter-spacing: -7px;
+    text-align: center;
+    font-size: 8em;
+    font-family: 'Arial', cursive;
+    color: rgba(0,0,0,0);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    transition: 0.3s;
+}
 
+.undefined-studio:hover {
+    letter-spacing: 3px;
+    /* color: black; */
+}
 
+.black-text {
+    color: black;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CONTACT */
 #about-container, #contact-info, #choose-country-container, .photo-top-container {
-    border: 1px solid red;
     padding-left: 2vw;
+    padding-top: 2vw;
     padding-right: 2vw;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: row;
 }
 
-#about-container div:nth-of-type(1) {
-    width: 30%;
-    display: flex;
+#contact-info {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    justify-content: center;
+    text-align: center;
 }
 
-#about-container div:nth-of-type(2) {
+#contact-info li a {
+    text-decoration: none;
+    color: black;
+}
+
+#about-container div:nth-of-type(1), #choose-country-container div:nth-of-type(1) {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    padding-left: 10vw;
+}
+
+#about-container div:nth-of-type(2), #choose-country-container div:nth-of-type(2) {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70vh;
 }
 
-#about-container div {
-    border: 1px solid red;
+.text-design {
+    font-size: 5em;
+    line-height: 50px;
+    font-family: 'Arial', cursive;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    transition: 0.2s;
 }
 
-/* ABOUT */
-#about, #scrap-category {
-    padding-top: 1em;
-    padding-bottom: 1em;
+.text-design:hover {
+    letter-spacing: -4px;
 }
 
 #about-undefined {
-    font-weight: 100;
+    width: 30%;
     font-size: 1em;
 }
 
+#country-list li a {
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-
-
-
-
+.country:hover {
+    border-bottom: 3px solid black;
+}
 
 /* MEMORIES PHOTO GALLERY */
 .gallery-container {
-    padding: 10vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .gallery-container ul {
@@ -160,4 +200,25 @@ ul {
     min-width: 100%;
     object-fit: cover;
     vertical-align: bottom;
+}
+
+.photo-top-container {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+
+.photo-top-container p {
+    width: 33%;
+}
+
+.photo-top-container p:nth-of-type(2) {
+    text-align: center;
+}
+
+
+.back-button {
+    color: black;
+    text-decoration: none;
+    margin-left: 2em;
 }

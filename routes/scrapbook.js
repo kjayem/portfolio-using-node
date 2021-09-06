@@ -5,8 +5,9 @@ router.route("/:id").get((req, res) => {
     ///memories/:id
     var photoLocation = req.params.id;
     var title = "UNDEFINED | Scrapbook"
-   
+
     if (photoLocation === 'choose-country') {
+        // changeNavColor();
         res.render('scrapbook/scrapbook-choose', {
         //layout.hbs
         title: title
