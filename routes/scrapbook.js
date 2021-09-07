@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+var app = express();
+
 router.route("/:id").get((req, res) => {
     ///memories/:id
     var photoLocation = req.params.id;

@@ -1,5 +1,6 @@
 <div id="choose-country-container">
-    <div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {{!-- <div>
         <h1 class="text-design" class="page-title">SCRAPS</h1>
         <h1 class="text-design" class="page-title">SCRAPS</h1>
         <h1 class="text-design" class="page-title">SCRAPS</h1>
@@ -7,13 +8,57 @@
         <h1 class="text-design" class="page-title">SCRAPS</h1>
         <h1 class="text-design" class="page-title">SCRAPS</h1>
         <h1 class="text-design" class="page-title">SCRAPS</h1>
-    </div>
+    </div> --}}
     <div>
         <ul id="country-list">
-        <li><i class="fa fa-long-arrow-down" aria-hidden="true"></i> Choose Country <i class="fa fa-long-arrow-down" aria-hidden="true"></i></li>
-        <li><a href="/scrapbook/Chicago" class="country">CHICAGO</a></li>
-        <li><a href="/scrapbook/UIUC" class="country">UIUC</a></li>
-        {{!-- <li><a href="/scrapbook/Seattle" class="country">| SEATTLE</a></li> --}}
+            <div id="pointer-image">
+            <img id="pointer-image-chicago" src="/img/chicago-caution.jpg"/>
+            <img id="pointer-image-uiuc" src="/img/uiuc-road.jpg"/>
+            </div>
+            <div class="country-list-container">
+                <li><i class="fa fa-long-arrow-down" aria-hidden="true"></i> Choose Country <i class="fa fa-long-arrow-down" aria-hidden="true"></i></li>   
+                <li class="country" id="chicago"><a href="/scrapbook/Chicago">CHICAGO</a></li>
+                <li class="country" id="uiuc"><a href="/scrapbook/UIUC">UIUC</a></li>
+                <li class="country" id="s-korea"><a href="/scrapbook/Seattle">S.KOREA</a></li>
+                <li class="country" id="seattle"><a href="/scrapbook/Seattle">SEATTLE</a></li>
+            </div>
         </ul>   
     </div>
+
+    <script>
+        let isMouseHover = false;
+        let chicago = document.getElementById('chicago');
+        let chicagoImage = document.getElementById('pointer-image-chicago');
+        let uiuc = document.getElementById('uiuc');
+        let uiucImage = document.getElementById('pointer-image-uiuc');
+       
+        //chicago 
+        chicago.addEventListener('mouseleave', function(event) {
+            isMouseHover = false;
+            chicagoImage.style.display = "none";
+        }, false);
+        chicago.addEventListener('mouseover', function(event) {
+            isMouseHover = true;
+            chicagoImage.style.display = "block";
+        }, false);
+
+        //uiuc
+        uiuc.addEventListener('mouseleave', function(event) {
+            isMouseHover = false;
+            uiucImage.style.display = "none";
+        }, false);
+        uiuc.addEventListener('mouseover', function(event) {
+            isMouseHover = true;
+            uiucImage.style.display = "block";
+        }, false);
+        
+        //image follows pointer
+        $(document).mousemove(function(e) {
+        $("#pointer-image").css({
+                left: e.pageX,
+                top: e.pageY
+            });
+        });
+    </script>
 </div>
+

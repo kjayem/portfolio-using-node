@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -12,7 +16,7 @@ ul {
 
 #nav-container {
     width: 100vw;
-    height: 5vh;
+    height: 7vh;
     background-color: white;
     position: sticky;
     display: flex;
@@ -78,10 +82,10 @@ ul {
 }
 
 #index-container {
-    /* background-image: url("../img/seattle-park.png");
+    background-image: url("../img/seattle-park.png");
     background-size: cover;
     background-position-y: center;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -131,7 +135,7 @@ ul {
     color: black;
 }
 
-#about-container div:nth-of-type(1), #choose-country-container div:nth-of-type(1) {
+/* #about-container div:nth-of-type(1), #choose-country-container div:nth-of-type(1) {
     color: black;
     display: flex;
     flex-direction: column;
@@ -139,9 +143,15 @@ ul {
     justify-content: center;
     width: 30%;
     padding-left: 10vw;
+} */
+
+#choose-country-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
 }
 
-#about-container div:nth-of-type(2), #choose-country-container div:nth-of-type(2) {
+#about-container div:nth-of-type(1), #choose-country-container div:nth-of-type(1) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,15 +178,40 @@ ul {
     font-size: 1em;
 }
 
-#country-list li a {
-    font-size: 1em;
-    color: black;
+#country-list {
+    flex-wrap: wrap;
+}
+
+.country-list-container li:nth-of-type(1){
+    text-align: center;
+}
+
+#pointer-image {
+    position: absolute;
+    z-index: -1;
+}
+
+#pointer-image-chicago, #pointer-image-uiuc {
+    width: 500px;
+    height: 400px;
+    margin-right: 80%;
+    margin-bottom: 30%;
+    display: none;
+}
+.country {
+    font-size: 5em;
     font-weight: bold;
+    letter-spacing: -9px;
+}
+
+.country a {
     text-decoration: none;
+    color: black;
 }
 
 .country:hover {
-    border-bottom: 3px solid black;
+    color: black;
+    /* background-color: red; */
 }
 
 /* MEMORIES PHOTO GALLERY */
