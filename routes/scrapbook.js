@@ -14,9 +14,9 @@ router.route("/:id").get((req, res) => {
         //layout.hbs
         title: title
     });
-    } else if (photoLocation === 'United Kingdom') {
+    } else if (photoLocation === 'London') {
         ///scrapbook/chicago
-        res.render('scrapbook/united-kingdom', {
+        res.render('scrapbook/london', {
             // title: title + ' | scrapbook',
             photoLocation: photoLocation,
             //layout.hbs
