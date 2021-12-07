@@ -6,7 +6,7 @@ var app = express();
 router.route("/:id").get((req, res) => {
     ///memories/:id
     var photoLocation = req.params.id;
-    var title = "UNDEFINED | Scrapbook"
+    var title = "DOYOUSOUL? | Scrapbook"
 
     if (photoLocation === 'choose-country') {
         // changeNavColor();
@@ -14,6 +14,15 @@ router.route("/:id").get((req, res) => {
         //layout.hbs
         title: title
     });
+    } else if (photoLocation === 'United Kingdom') {
+        ///scrapbook/chicago
+        res.render('scrapbook/united-kingdom', {
+            // title: title + ' | scrapbook',
+            photoLocation: photoLocation,
+            //layout.hbs
+            title: title
+        });
+     
     } else if (photoLocation === 'Chicago') {
         ///scrapbook/chicago
         res.render('scrapbook/chicago', {
@@ -26,6 +35,14 @@ router.route("/:id").get((req, res) => {
     } else if (photoLocation === 'UIUC') {
         ///scrapbook/uiuc
         res.render('scrapbook/uiuc', {
+            photoLocation: photoLocation,
+            //layout.hbs
+            title: title
+        });
+    } else if (photoLocation === 'South Korea') {
+        ///scrapbook/south korea
+        res.render('scrapbook/south-korea', {
+            // title: title + ' | scrapbook',
             photoLocation: photoLocation,
             //layout.hbs
             title: title
