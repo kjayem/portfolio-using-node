@@ -4,6 +4,7 @@ var expressHbs = require('express-handlebars');
 
 var indexRouter = require("./routes/index");
 var aboutRouter = require("./routes/about");
+var projectsRouter = require("./routes/projects");
 var scrapbookRouter = require("./routes/scrapbook");
 
 var app = express();
@@ -21,9 +22,11 @@ app.set('view engine', 'hbs');
 app.use(express.static('public'));
 
 //routes
-app.use("/scrapbook", scrapbookRouter);
-app.use("/about", aboutRouter);
+
 app.use("/", indexRouter);
+app.use("/about", aboutRouter);
+app.use("/scrapbook", scrapbookRouter);
+app.use("/projects", projectsRouter);
 
 //error handlers
 app.use(function(req, res, next) {
