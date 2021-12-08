@@ -32,16 +32,16 @@ router.route("/:id").get((req, res) => {
             title: title
         });
      
-    } else if (photoLocation === 'UIUC') {
+    } else if (photoLocation === 'UIUC 18-19') {
         ///scrapbook/uiuc
-        res.render('scrapbook/uiuc', {
+        res.render('scrapbook/uiuc-18-19', {
             photoLocation: photoLocation,
             //layout.hbs
             title: title
         });
-    } else if (photoLocation === 'South Korea') {
+    } else if (photoLocation === 'Seoul 20') {
         ///scrapbook/south korea
-        res.render('scrapbook/south-korea', {
+        res.render('scrapbook/seoul-20', {
             // title: title + ' | scrapbook',
             photoLocation: photoLocation,
             //layout.hbs
