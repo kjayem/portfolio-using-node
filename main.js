@@ -8,6 +8,8 @@ var scrapbookRouter = require("./routes/scrapbook");
 
 var app = express();
 
+const port = process.env.PORT || 5000;
+
 // view engine setup
 app.engine('.hbs', expressHbs({
   defaultLayout: 'layout',  
@@ -33,6 +35,6 @@ app.use(function (err, req, res, next) {
   res.status(500).send('Something broke!')
 });
 
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log('Example app listening on port 3000!')
 });
