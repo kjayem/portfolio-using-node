@@ -9,7 +9,6 @@ var scrapbookRouter = require("./routes/scrapbook");
 var noticeRouter = require("./routes/notice");
 
 var app = express();
-const port = process.env.PORT || 5000;
 
 
 // view engine setup
@@ -40,6 +39,6 @@ app.use(function (err, req, res, next) {
   res.status(500).send('Something broke!')
 });
 
-app.listen(port, function() {
+app.listen(process.env.PORT || 5000, function() {
   console.log('Example app listening on port 5000!')
 });
