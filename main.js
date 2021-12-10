@@ -6,6 +6,7 @@ var indexRouter = require("./routes/index");
 var aboutRouter = require("./routes/about");
 var projectsRouter = require("./routes/projects");
 var scrapbookRouter = require("./routes/scrapbook");
+var noticeRouter = require("./routes/notice");
 
 var app = express();
 const port = process.env.PORT || 5000;
@@ -27,6 +28,7 @@ app.use("/", indexRouter);
 app.use("/about", aboutRouter);
 app.use("/scrapbook", scrapbookRouter);
 app.use("/projects", projectsRouter);
+app.use("/notice", noticeRouter);
 
 //error handlers
 app.use(function(req, res, next) {

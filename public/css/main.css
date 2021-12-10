@@ -157,9 +157,13 @@ ul {
     flex-direction: row;
 }
 
+#about-container .text-design {
+    letter-spacing: -10px;
+}
+
 #projects-container .text-design {
     color: black;
-    border: 1px solid red;
+    border: 1px solid black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
