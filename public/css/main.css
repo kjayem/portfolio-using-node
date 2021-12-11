@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: whitesmoke;
 }
 
 html {
@@ -17,20 +18,25 @@ ul {
 #nav-container {
     width: 100vw;
     height: 7vh;
-    background-color: white;
+    background-color: whitesmoke;
     position: sticky;
     display: flex;
     flex-direction: row;
     /* position: sticky;  */
 }
 
+#nav-container h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #nav-container a {
     text-decoration: none;
     color: black;
+    transition: ease-in-out 0.2s;
 }
 
 #nav-container a:hover {
-    border-bottom: 3px solid black;
+    color: grey;
 }
 
 #nav-left, #nav-right {
@@ -46,13 +52,13 @@ ul {
     flex-direction: row;
 }
 
-#nav-left div a {
+#nav-left div h1 {
     margin-right: 2vw;
     width: 4vw;
     text-align: center;
 }
 
-#nav-left div a:nth-of-type(1), #nav-left div a:nth-of-type(3) {
+#nav-left div h1:nth-of-type(1), #nav-left div h1:nth-of-type(3) {
     text-align: center;
 } 
 
@@ -60,7 +66,7 @@ ul {
     margin-left: 10%;
 }
 
-#nav-left div a, #nav-right div a {
+#nav-left div h1, #nav-right div h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
@@ -76,7 +82,7 @@ ul {
     margin-right: 10%;
 }
 
-#nav-right div a {
+#nav-right div h1 {
     width: 8vw;
     text-align: center;
 }
@@ -102,7 +108,7 @@ ul {
     align-items: center;
     height: 70vh;
     z-index: 500;
-    border: 20px solid white;
+    border: 20px solid whitesmoke;
     
 }
 
@@ -116,7 +122,7 @@ ul {
     justify-content: center;
     z-index: 100000;
     width: 100%;
-    border: 30px solid white;
+    border: 30px solid whitesmoke;
 }
 
 #background-image-container {
@@ -127,21 +133,20 @@ ul {
 }
 
 .undefined-studio {
-    line-height: 70px;
+    /* line-height: 80px; */
     letter-spacing: -7px;
     text-align: center;
     font-size: 8em;
     font-family: 'Arial', cursive;
-    color: rgba(0,0,0,0);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    color: black;
     transition: 0.3s;
     cursor:default;
 }
 
-.undefined-studio:hover {
-    /* letter-spacing: 3px; */
-    /* color: black; */
+#reaction-to-art {
+    color: black;
+    font-family: 'Arial', cursive;
+    text-align: center;
 }
 
 .black-text {
@@ -155,15 +160,19 @@ ul {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: row;
+    background-color: whitesmoke;
 }
 
 #about-container .text-design {
     letter-spacing: -10px;
 }
 
+#projects-container {
+    background-color: whitesmoke;
+}
+
 #projects-container .text-design {
     color: black;
-    border: 1px solid black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
@@ -174,7 +183,6 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 1px solid green;
     justify-content: center;
 }
 
@@ -182,7 +190,7 @@ ul {
     width: 30vw;
     height: 30vw;
     margin: 1vw;
-    border: 1px solid red;
+    border: 1px solid black;
 }
 
 #contact-info {
@@ -243,6 +251,14 @@ ul {
     text-align: left;
 }
 
+.country {
+    -webkit-transition: ease-in-out 0.2s;
+}
+
+.country:hover {
+    letter-spacing: -15px;
+}
+
 #pointer-image {
     position: absolute;
     z-index: -1;
@@ -272,7 +288,7 @@ ul {
 }
 
 .country:hover a {
-    color: whitesmoke;
+    color: grey;
 }
 
 /* MEMORIES PHOTO GALLERY */
@@ -288,7 +304,7 @@ ul {
 
 .gallery-container li {
     height: 60vh;
-    border: 1em white solid;
+    border: 1em whitesmoke solid;
     flex-grow: 1;
 }
 

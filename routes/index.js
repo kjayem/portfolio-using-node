@@ -3,9 +3,10 @@ const router = express.Router();
 
 // get home page
 router.get('/', (req, res) => {
+    var title = "DOYOUSOUL? | home"
     res.render('', {
         //layout.hbs
-        title: 'DOYOUSOUL?'
+        title:title
     });
 
     
