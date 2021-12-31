@@ -145,7 +145,7 @@ ul {
     line-height: 80px;
     letter-spacing: -7px;
     text-align: center;
-    font-size: 7em;
+    font-size: 5em;
     font-family: 'Arial', cursive;
     color: black;
     cursor:default;
@@ -489,8 +489,8 @@ ul {
     }
 
     .gallery-container {
-        padding-left: 5vw;
-        padding-right: 5vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
     }
 }
 
@@ -500,6 +500,52 @@ ul {
         height: 100%;
     }
 
+}
+
+@media only screen and (max-width: 375px) {
+
+    #index-container {
+        padding-bottom: 5vh;
+    }
+
+    #undefined-studio {
+        display: none;
+    }
+ 
+    #undefined-studio-phone {
+        display: block;
+        font-size: 3em;
+    }
+
+    #reaction-to-art {
+        width: 300px;
+    }
+
+    #nav-left div h1 {
+        margin-right: 8vw;
+        width: 10vw;
+        text-align: center;
+    }
+
+    .country {
+        font-size: 4em;
+    }
+
+    #scroll-down {
+        display: block;
+    }
+
+    .gallery-container img {
+        max-height: 100%;
+        max-width: 360px;
+        object-fit: cover;
+        vertical-align: bottom;
+    }
+
+    .gallery-container {
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
 }
 
 
