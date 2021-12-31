@@ -116,7 +116,7 @@ ul {
 #index-container {
     /* background-image: url("../img/south-korea-dragon.jpg"); */
     padding-top: 28vh;
-    padding-bottom: 20vh;
+    padding-bottom: 50vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -130,25 +130,40 @@ ul {
     height: 70vh;
 } */
 
-.undefined-studio {
+#undefined-studio {
     /* line-height: 80px; */
     letter-spacing: -7px;
     text-align: center;
-    font-size: 8em;
+    font-size: 10em;
     font-family: 'Arial', cursive;
     color: black;
     cursor:default;
+    display: block;
 }
+
+#undefined-studio-phone {
+    line-height: 80px;
+    letter-spacing: -7px;
+    text-align: center;
+    font-size: 7em;
+    font-family: 'Arial', cursive;
+    color: black;
+    cursor:default;
+    display: none;
+    margin-bottom: 5vh;
+}
+
+
 
 #reaction-to-art {
     color: black;
     font-family: 'Arial', cursive;
     font-weight: lighter;
-    font-size: 19px;
+    font-size: 17px;
     width: 430px;
     align-self: center;
     text-align: justify;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .black-text {
@@ -190,24 +205,26 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
+    flex-wrap: wrap;
 }
 
 .artists-title {
-    margin-top: 20px;
-    width: 30%;
+    margin: 10px;
+    width: 600px;
+    padding-bottom: 10vw;
     text-align: center;
-    color: black;
     font-family: Arial, Helvetica, sans-serif;    
     font-size: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
+    /* justify-content: center; */
+    flex-wrap: wrap;
 }
 
-.artists-title h1:nth-of-type(1) {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.artists-title h1 {
+    margin-top: 50px;
+    margin-bottom: 200px;
 }
 
 .artists-title h2 {
@@ -215,17 +232,17 @@ ul {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     font-size: 19px;
-    width: 50%;
     text-align: left;
-    margin-top: 30px;  
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #artist-one-picture, #artist-two-picture, #artist-three-picture {
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
     border: 1px solid black;
 }
+
 
 #projects-container {
     background-color: whitesmoke;
@@ -233,7 +250,7 @@ ul {
 }
 
 #projects-container .text-design {
-    color: black;
+    color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
@@ -244,19 +261,19 @@ ul {
 #projects-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .project-cover {
-    width: 30vw;
-    height: 30vw;
+    width: 500px;
+    height: 500px;
     margin: 1vw;
     border: 1px solid black;
 }
 
 #contact-info {
-    padding-top: 5vh;
+    padding-top: 10vh;
     padding-bottom: 5vh;
     justify-content: center;
     text-align: center;
@@ -302,6 +319,12 @@ ul {
 
 .country-list-container {
     overflow-y: scroll;
+}
+
+#scroll-down {
+    text-align: right;
+    font-size: 1em;
+    display: none;
 }
 
 #country-list h1 {
@@ -401,7 +424,6 @@ ul {
     text-align: center;
 }
 
-
 .back-button {
     color: black;
     text-decoration: none;
@@ -429,3 +451,57 @@ ul {
     font-weight: lighter;
     font-size: 20px;
 }
+
+
+@media only screen and (max-width: 1000px) {
+
+    #index-container {
+        padding-bottom: 5vh;
+    }
+
+    #undefined-studio {
+        display: none;
+    }
+ 
+    #undefined-studio-phone {
+        display: block;
+    }
+
+    #nav-left div h1 {
+        margin-right: 8vw;
+        width: 6vw;
+        text-align: center;
+    }
+
+    .country {
+        font-size: 6em;
+    }
+
+    #scroll-down {
+        display: block;
+    }
+
+    .gallery-container img {
+        max-height: 100%;
+        max-width: 500px;
+        object-fit: cover;
+        vertical-align: bottom;
+    }
+
+    .gallery-container {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .gallery-container li {
+        height: 100%;
+    }
+
+}
+
+
+
+
