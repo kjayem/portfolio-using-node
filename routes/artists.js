@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 router.route("/").get((req, res) => {
-    var title = "DOYOUSOUL? | About"
-    res.render('about/about', {
+    var title = "DOYOUSOUL? | Artists"
+    res.render('artists/artists', {
         title: title
     });
 })

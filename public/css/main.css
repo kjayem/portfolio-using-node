@@ -17,9 +17,12 @@ ul {
 
 #nav-container {
     width: 100vw;
+    z-index: 100000;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
     height: 7vh;
     background-color: whitesmoke;
-    position: sticky;
+    position: fixed;
     display: flex;
     flex-direction: row;
     /* position: sticky;  */
@@ -31,6 +34,7 @@ ul {
 
 #nav-container a {
     text-decoration: none;
+    font-size: 16px;
     color: black;
     transition: ease-in-out 0.2s;
 }
@@ -88,14 +92,11 @@ ul {
 }
 
 #large-container {
-    height: 70vh;
+    
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(0,0,0,0);
+    /* background-color: rgba(0,0,0,0); */
 }
-
+/* 
 #background-image-container {
     background-size: cover;
     background-position-y: center;
@@ -110,27 +111,24 @@ ul {
     z-index: 500;
     border: 20px solid whitesmoke;
     
-}
+} */
 
 #index-container {
     /* background-image: url("../img/south-korea-dragon.jpg"); */
-    top: 7vh;
-    position: absolute;
-    height: 70vh;
+    padding-top: 28vh;
+    padding-bottom: 20vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 100000;
-    width: 100%;
-    border: 30px solid whitesmoke;
 }
-
+/* 
 #background-image-container {
     background-size: cover;
     background-position-y: center;
     background-repeat: no-repeat;
     height: 70vh;
-}
+} */
 
 .undefined-studio {
     /* line-height: 80px; */
@@ -139,21 +137,33 @@ ul {
     font-size: 8em;
     font-family: 'Arial', cursive;
     color: black;
-    transition: 0.3s;
     cursor:default;
 }
 
 #reaction-to-art {
     color: black;
     font-family: 'Arial', cursive;
-    text-align: center;
+    font-weight: lighter;
+    font-size: 19px;
+    width: 430px;
+    align-self: center;
+    text-align: justify;
+    margin-top: 30px;
 }
 
 .black-text {
     color: black;
 }
 
-#about-container, #contact-info, #choose-country-container, .photo-top-container {
+#latest-projects {
+    text-align: center;
+    font-family: 'Arial', cursive;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#contact-info, #choose-country-container, .photo-top-container {
     padding-left: 2vw;
     padding-top: 2vw;
     padding-right: 2vw;
@@ -163,12 +173,63 @@ ul {
     background-color: whitesmoke;
 }
 
-#about-container .text-design {
-    letter-spacing: -10px;
+#artists-container {
+    background-color: whitesmoke;
+}
+
+#artists-container .text-design {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 8vh;
+    /* margin-top: 2vw; */
+}
+
+#artists-introduction-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.artists-title {
+    margin-top: 20px;
+    width: 30%;
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;    
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artists-title h1:nth-of-type(1) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.artists-title h2 {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 19px;
+    width: 50%;
+    text-align: left;
+    margin-top: 30px;  
+    margin-bottom: 30px;
+}
+
+#artist-one-picture, #artist-two-picture, #artist-three-picture {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
 }
 
 #projects-container {
     background-color: whitesmoke;
+    
 }
 
 #projects-container .text-design {
@@ -176,7 +237,8 @@ ul {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
-    margin-top: 2vw;
+    padding-top: 8vh;
+    /* margin-top: 2vw; */
 }
 
 #projects-list {
@@ -194,8 +256,8 @@ ul {
 }
 
 #contact-info {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     justify-content: center;
     text-align: center;
 }
@@ -205,7 +267,7 @@ ul {
     color: black;
 }
 
-#about-container div:nth-of-type(1), #about-container div:nth-of-type(2), #country-list {
+#country-list {
     color: black;
     display: flex;
     flex-direction: column;
@@ -218,8 +280,11 @@ ul {
 } 
 
 #choose-country-container {
+    padding-top: 8vh;
     display: flex;
     flex-direction: row;
+    height: 80vh;
+    align-content: center;
     /* align-items: left;     */
 }
 
@@ -235,16 +300,14 @@ ul {
     /* letter-spacing: -4px; */
 }
 
-#about-undefined {
-    width: 40%;
-    font-size: 20px;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    text-decoration: none;
-    /* border: 1px solid red; */
-}
-
 .country-list-container {
     overflow-y: scroll;
+}
+
+#country-list h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 13px;
 }
 
 .country-list-container li:nth-of-type(1){
@@ -256,7 +319,12 @@ ul {
 }
 
 .country:hover {
-    letter-spacing: -15px;
+    /* letter-spacing: -15px; */
+}
+
+#country-list {
+    /* position: absolute; */
+    z-index: -10;
 }
 
 #pointer-image {
@@ -270,6 +338,8 @@ ul {
     display: none;
 }
 
+
+
 .country {
     font-size: 7em;
     font-weight: bold;
@@ -281,13 +351,14 @@ ul {
 .country a {
     text-decoration: none;
     color: black;
+    z-index: 1000;
 }
 
 .country:hover {
     /* background-color: black; */
 }
 
-.country:hover a {
+.country a:hover {
     color: grey;
 }
 
@@ -319,6 +390,7 @@ ul {
     display: flex;
     flex-direction: row;
     padding: 1em;
+    padding-top: 100px;
 }
 
 .photo-top-container p {
@@ -334,4 +406,26 @@ ul {
     color: black;
     text-decoration: none;
     margin-left: 2em;
+}
+
+#notice-container .text-design {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 8vh;
+    /* margin-top: 2vw; */
+}
+
+#notice-board {
+    height: 60vh;
+    padding-top: 30px;
+}
+
+#notice-board h1 {
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
 }
