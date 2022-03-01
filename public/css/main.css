@@ -14,15 +14,25 @@ ul {
     margin: 0;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    margin-top: auto;
+}
+
 #nav-container {
-    width: 100vw;
+    width: 100%;
     z-index: 100000;
     height: 50px;
     background-color: white;
     position: fixed;
     display: flex;
     flex-direction: row;
-    /* position: sticky;  */
+    /* position: sticky;  */  
 }
 
 #nav-container h1 {
@@ -33,11 +43,6 @@ ul {
     text-decoration: none;
     font-size: 12px;
     color: black;
-    transition: ease-in-out 0.2s;
-}
-
-#nav-container a:hover {
-    color: grey;
 }
 
 #nav-left, #nav-right {
@@ -91,36 +96,13 @@ ul {
     text-align: center;
 }
 
-#large-container {
-    
-    width: 100%;
-    /* background-color: rgba(0,0,0,0); */
-}
-/* 
-#background-image-container {
-    background-size: cover;
-    background-position-y: center;
-    background-repeat: no-repeat;
-    position: relative;
-    filter: blur(4px);
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    height: 70vh;
-    z-index: 500;
-    border: 20px solid white;
-    
-} */
-
 #index-container {
     /* background-image: url("../img/south-korea-dragon.jpg"); */
-    padding-top: 28vh;
-    padding-bottom: 50vh;
-    width: 100%;
+    border: 1px solid red;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
 }
 /* 
 #background-image-container {
@@ -132,9 +114,10 @@ ul {
 
 #undefined-studio {
     /* line-height: 80px; */
-    letter-spacing: -7px;
+    padding-top: 100px;
+    letter-spacing: -15px;
     text-align: center;
-    font-size: 6em;
+    font-size: 8em;
     font-family: 'Arial', cursive;
     /* font-weight: 400; */
     /* font-style: normal; */
@@ -144,7 +127,8 @@ ul {
 }
 
 #undefined-studio-phone {
-    line-height: 80px;
+    padding-top: 70px;
+    line-height: 60px;
     letter-spacing: -7px;
     text-align: center;
     font-size: 5em;
@@ -152,10 +136,7 @@ ul {
     color: black;
     cursor:default;
     display: none;
-    margin-bottom: 5vh;
 }
-
-
 
 #reaction-to-art {
     color: black;
@@ -163,8 +144,9 @@ ul {
     font-weight: 400;
     font-style: normal;
     font-weight: lighter;
-    font-size: 17px;
-    width: 430px;
+    font-size: 16px;
+    text-align: center;
+    width: 50vw;
     align-self: center;
     /* text-align: justify; */
     margin-top: 60px;
@@ -182,10 +164,8 @@ ul {
     padding: 10px;
 }
 
-#contact-info, #choose-country-container, .photo-top-container {
-    padding-left: 2vw;
+#choose-country-container {
     padding-top: 2vw;
-    padding-right: 2vw;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: row;
@@ -202,26 +182,16 @@ ul {
     font-weight: lighter;
     font-size: 13px;
     text-align: center;
-    padding-top: 8vh;
-    /* margin-top: 2vw; */
-}
-
-#artists-introduction-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border: 1px solid red;
+    padding-top: 50px;
 }
 
 .artists-title {
-    width: 50%;
-    text-align: center;
-    border: 1px solid red;
+    padding: 20px 20vw 20px 20vw;
 }
 
 .artists-title h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: lighter; 
 }
 
@@ -232,8 +202,11 @@ ul {
 }
 
 #projects-container {
-    padding-top: 100px;
-    height: 80vh;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
 }
 
 #projects-container h3:nth-of-type(1) {
@@ -271,11 +244,16 @@ ul {
 }
 
 #contact-info {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
     padding-top: 5vh;
     padding-bottom: 5vh;
     justify-content: center;
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100%;
 }
 
 #contact-info li a {
@@ -299,30 +277,15 @@ ul {
 #choose-country-container {
     padding-top: 8vh;
     display: flex;
-    flex-direction: row;
-    height: 80vh;
-    align-content: center;
+    flex-direction: column;
+    border: 1px solid red;
     /* align-items: left;     */
-}
-
-.country-list-container {
-    overflow-y: scroll;
-}
-
-#scroll-down {
-    text-align: right;
-    font-size: 1em;
-    display: none;
 }
 
 #country-list h1 {
     text-align: center;
     margin-bottom: 50px;
     font-size: 13px;
-}
-
-.country-list-container li:nth-of-type(1){
-    text-align: left;
 }
 
 .country {
@@ -378,13 +341,14 @@ ul {
 
 /* MEMORIES PHOTO GALLERY */
 .gallery-container {
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .gallery-container ul {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .gallery-container li {
@@ -401,10 +365,14 @@ ul {
 }
 
 .photo-top-container {
+    width: 100%;
+    border: 1px solid green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
     display: flex;
     flex-direction: row;
-    padding: 1em;
-    padding-top: 100px;
+    margin-top: 50px;
+    padding: 5px;
 }
 
 .photo-top-container p {
@@ -426,7 +394,7 @@ ul {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
-    padding-top: 8vh;
+    padding-top: 50px;
     /* margin-top: 2vw; */
 }
 
@@ -443,12 +411,12 @@ ul {
     font-size: 20px;
 }
 
-
+/* screen sizes */
 @media only screen and (max-width: 1000px) {
-
-    #index-container {
-        padding-bottom: 5vh;
+    #nav-container a {
+        font-size: 10px;
     }
+
 
     #undefined-studio {
         display: none;
@@ -458,23 +426,17 @@ ul {
         display: block;
     }
 
-    #nav-left div h1 {
-        margin-right: 8vw;
-        width: 6vw;
-        text-align: center;
+    .photo-top-container {
+        font-size: 10px;
     }
 
-    .country {
-        font-size: 6em;
-    }
-
-    #scroll-down {
-        display: block;
+    .gallery-container li {
+        height: 100%;
     }
 
     .gallery-container img {
-        max-height: 100%;
-        max-width: 500px;
+        max-height: 100vh;
+        max-width: 100%;
         object-fit: cover;
         vertical-align: bottom;
     }
@@ -483,61 +445,10 @@ ul {
         padding-left: 2vw;
         padding-right: 2vw;
     }
-}
 
-@media only screen and (max-width: 700px) {
-
-    .gallery-container li {
-        height: 100%;
-    }
-
-}
-
-@media only screen and (max-width: 375px) {
-
-    #index-container {
-        padding-bottom: 5vh;
-    }
-
-    #undefined-studio {
-        display: none;
-    }
- 
-    #undefined-studio-phone {
-        display: block;
-        font-size: 3em;
-    }
-
-    #reaction-to-art {
-        width: 300px;
-    }
-
-    #nav-left div h1 {
-        margin-right: 12vw;
-        text-align: center;
-    }
-
-    .country {
-        font-size: 4em;
-    }
-
-    #scroll-down {
-        display: block;
-    }
-
-    .gallery-container img {
-        max-height: 100%;
-        max-width: 360px;
-        object-fit: cover;
-        vertical-align: bottom;
-    }
-
-    .gallery-container {
-        padding-left: 1vw;
-        padding-right: 1vw;
+    #contact-info {
+        font-size: 10px;
     }
 }
-
-
 
 
