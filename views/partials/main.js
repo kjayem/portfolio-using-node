@@ -6,6 +6,7 @@ var indexRouter = require("./routes/index");
 var artistsRouter = require("./routes/artists");
 var projectsRouter = require("./routes/projects");
 var scrapbookRouter = require("./routes/scrapbook");
+var playRouter = require("./routes/play");
 var noticeRouter = require("./routes/notice");
 
 var app = express();
@@ -27,6 +28,7 @@ app.use("/", indexRouter);
 app.use("/artists", artistsRouter);
 app.use("/scrapbook", scrapbookRouter);
 app.use("/projects", projectsRouter);
+app.use("/play", playRouter);
 app.use("/notice", noticeRouter);
 
 //error handlers

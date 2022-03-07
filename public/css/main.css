@@ -172,15 +172,12 @@ footer{
     background-color: white;
 }
 
-#artists-container {
+#archives-container {
     background-color: white;
-}
-
-#artists-container {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
-    font-size: 13px;
+    font-size: 10px;
     text-align: center;
     padding-top: 50px;
 }
@@ -199,6 +196,15 @@ footer{
     width: 300px;
     height: 300px;
     border: 1px solid black;
+}
+
+#artists-container {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 50px;
 }
 
 #projects-container {
@@ -234,13 +240,6 @@ footer{
     margin-top: 5vh;
     text-align: left;
     padding-left: 5%;
-}
-
-.project-cover {
-    width: 500px;
-    height: 500px;
-    margin: 1vw;
-    border: 1px solid black;
 }
 
 #contact-info {
@@ -388,6 +387,40 @@ footer{
     margin-left: 2em;
 }
 
+#fav-album-container {
+    display: flex;  
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#fav-album-container p {
+    font-size: 13px;
+}
+
+.project-image {
+    height: 600px;
+    width: 600px;
+    margin-right: 300px;
+    margin-left: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+#first-project {
+    background-image: url("../img/hidden-flower.png");
+    background-size: cover;
+}
+
+#second-project {
+    background-image: url("../img/dawn.png");
+    background-size: cover;
+}
+
+
+
+
 #notice-container {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
@@ -416,13 +449,21 @@ footer{
         font-size: 10px;
     }
 
-
     #undefined-studio {
         display: none;
     }
  
     #undefined-studio-phone {
         display: block;
+    }
+
+    .project-image {
+        width: 80vw;
+        height: 80vw;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .photo-top-container {
@@ -448,6 +489,8 @@ footer{
     #contact-info {
         font-size: 10px;
     }
+
+
 }
 
 
